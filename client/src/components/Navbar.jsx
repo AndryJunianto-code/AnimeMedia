@@ -6,6 +6,7 @@ import {Menu} from '@material-ui/icons'
 import {useAuth0} from '@auth0/auth0-react'
 import nouser from '../images/nouser.jpg'
 import SearchModal from '../modal/SearchModal'
+import {Link} from 'react-router-dom'
 
 export default function Navbar() {
     const {user} = useAuth0()
@@ -20,14 +21,14 @@ export default function Navbar() {
     }
     return (
     <>
-        <nav className='navBlue text-gray-50 sticky top-0 left-0 w-full'>
-            <section className='px-2 md:px-7 py-3 flex items-center justify-between'>
-                <h1 className='text-4xl font-semibold xl:text-5xl'>AJ Anime</h1>
+        <nav className='navBlue text-gray-50 sticky top-0 left-0 w-full z-20'>
+            <section className='px-2 md:px-7 py-1 flex items-center justify-between'>
+               <Link to='/'><h1 className='text-2xl font-semibold xl:text-3xl'>AJ Anime</h1></Link>
                 <div className='md:hidden flex items-center'> {/* ON SMALL SCREEN */}
                     <img className='rounded-full w-7 h-7 mr-1' src={user? user.picture: nouser} alt="profile" />
                     <span onClick={displayMenu}><Menu style={{fontSize:'35px'}}/></span>
                 </div>
-                <div className='hidden md:flex md:items-center md:text-lg`'>{/* ON BIG SCREEN */}
+                <div className='hidden md:flex md:items-center md:text-md`'>{/* ON BIG SCREEN */}
                     <h2 className='relative lg:text-xl font-semibold' onClick={handleSearchModal}>Search</h2>
                     <h2 className='mx-9 lg:text-xl font-semibold'>Scene Tracker</h2>{/* NEW */}
                     <h2 className='lg:text-xl font-semibold'>Random Generator</h2>

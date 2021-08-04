@@ -18,7 +18,7 @@ export default function SearchHeader() {
     return (
         <>
         {!openSearch ? (
-            <section onClick={()=>setOpenSearch(true)} className='md:hidden  bg-yellow-300 w-full max-w-full h-auto  text-xl tracking-widest flex'>
+            <section onClick={()=>setOpenSearch(true)} className='md:hidden  bg-yellow-300 w-full max-w-full h-auto  text-lg tracking-widest flex'>
                 <div className='mx-auto pt-2 flex'>
                     <p className='animate-bounce'>S</p>
                     <p className='animate-bounce'>E</p>

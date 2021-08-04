@@ -8,3 +8,6 @@
 .dark-0{
     @apply  fixed z-10 top-0 bottom-0 left-0 right-0 bg-opacity-0;
   }
+.topDetailedBox{
+  @apply px-1 py-0.5 rounded-sm shadow-md hover:shadow-lg
+}
