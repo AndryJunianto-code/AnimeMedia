@@ -28,11 +28,11 @@ export default function Navbar() {
                     <img className='rounded-full w-7 h-7 mr-1' src={user? user.picture: nouser} alt="profile" />
                     <span onClick={displayMenu}><Menu style={{fontSize:'35px'}}/></span>
                 </div>
-                <div className='hidden md:flex md:items-center md:text-md`'>{/* ON BIG SCREEN */}
-                    <h2 className='relative lg:text-xl font-semibold' onClick={handleSearchModal}>Search</h2>
-                    <h2 className='mx-9 lg:text-xl font-semibold'>Scene Tracker</h2>{/* NEW */}
-                    <h2 className='lg:text-xl font-semibold'>Random Generator</h2>
-                    <h2 className='lg:text-xl font-semibold mx-9'>Bookmark</h2>
+                <div className='hidden md:flex md:items-center'>{/* ON BIG SCREEN */}
+                    <h2 className='lg:text-md font-semibold' onClick={handleSearchModal}>Search</h2>
+                    <Link to='/scenetracker'><h2 className='mx-9 lg:text-md font-semibold'>Scene Tracker</h2></Link>{/* NEW */}
+                    <h2 className='lg:text-md font-semibold'>Random Generator</h2>
+                    <h2 className='lg:text-md font-semibold mx-9'>Bookmark</h2>
                     <img className='rounded-full w-10 h-10' src={user? user.picture: nouser} alt="profile" />
                 </div>
            </section>

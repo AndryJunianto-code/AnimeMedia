@@ -21,7 +21,7 @@ export default function SearchModal() {
     }
     return (
         <section className='dark-0 hidden md:block' onClick={closeSearchModal}>
-            <div className='absolute top-14 right-48 lg:right-72 bg-white shadow-md rounded-md h-auto w-96 text-black' onClick={e=>e.stopPropagation()}>
+            <div className='absolute top-12 right-48 lg:right-60 bg-white shadow-md rounded-md h-auto w-96 text-black' onClick={e=>e.stopPropagation()}>
                 <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} big={true}/>
                 {isSuccess &&
                 <section className='h-96 w-96 overflow-y-scroll'>
